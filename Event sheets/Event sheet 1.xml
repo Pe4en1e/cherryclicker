@@ -40,6 +40,9 @@
                 <action id="0" name="Set text" sid="608396675110147" type="Text7">
                     <param id="0" name="Text">buff1</param>
                 </action>
+                <action id="0" name="Set text" sid="580578367139591" type="Text2">
+                    <param id="0" name="Text">buff1_count</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="763761364072259">
