@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="buff1_count" sid="603988430539929" static="0" type="number">0</variable>
+        <variable constant="0" name="buff1" sid="159654448959297" static="0" type="number">10</variable>
+        <variable constant="0" name="persecond" sid="459744767895074" static="0" type="number">0</variable>
+        <variable constant="0" name="click" sid="675127205184930" static="0" type="number">1</variable>
+        <variable constant="0" name="cherries" sid="473675336070760" static="0" type="number">0</variable>
+        <event-block sid="965355514687372">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="569785018371496" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">clicker</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="803823616679039" type="System">
+                    <param id="0" name="Variable">cherries</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="628436164865099" type="Audio">
+                    <param id="0" name="Audio file">effect</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-4</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="522349256254832">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="487474029136473" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="946595807964976" type="count">
+                    <param id="0" name="Text">cherries</param>
+                </action>
+                <action id="0" name="Set text" sid="608396675110147" type="Text7">
+                    <param id="0" name="Text">buff1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="763761364072259">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="563697232932830" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">buff_autofarm</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="265244285045367" type="System">
+                    <param id="0" name="Variable">buff1</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">cherries</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="490111339978790" type="System">
+                    <param id="0" name="Variable">cherries</param>
+                    <param id="1" name="Value">-buff1</param>
+                </action>
+                <action id="-10" name="Add to" sid="776994917090268" type="System">
+                    <param id="0" name="Variable">buff1</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="-10" name="Add to" sid="930788554957781" type="System">
+                    <param id="0" name="Variable">persecond</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Add to" sid="413168762965933" type="System">
+                    <param id="0" name="Variable">buff1_count</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="242641226582643">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="850916003288411" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="175698673351632" type="System">
+                    <param id="0" name="Variable">cherries</param>
+                    <param id="1" name="Value">persecond</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

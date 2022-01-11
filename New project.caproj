@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>New project</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>rl4ukkrme4sv</unique-id>
+    <saved-with-version>27900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+    </used-plugins>
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1920</width>
+        <height>1080</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="bg" sid="312897481194312">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="305464297759737" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\cherryclicker\bg.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="218584509562384">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="908340610429077" speed="5">
+                    <frame duration="1" hotspotX="0.500615" hotspotY="0.500615" original-source="D:\cherryclicker\button.png">
+                        <collision-poly>
+                            <point x="0.424354" y="0.424354" />
+                            <point x="0.499385" y="0.152522" />
+                            <point x="0.638376" y="0.361624" />
+                            <point x="0.666667" y="0.499385" />
+                            <point x="0.778598" y="0.778598" />
+                            <point x="0.499385" y="0.373924" />
+                            <point x="0.220172" y="0.779828" />
+                            <point x="0.373924" y="0.499385" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextBox" sid="629363893230943">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Text" sid="122502523622974">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="count" sid="644477794548203">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Mouse" sid="994532903268846">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="back" sid="576622046426581">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="817441282562677" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\cherryclicker\back.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="cherry" sid="145317273388413">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="582613990628141" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\cherryclicker\cherry.png">
+                        <collision-poly>
+                            <point x="0.171488" y="0.151184" />
+                            <point x="0.5" y="0.0400729" />
+                            <point x="0.669421" y="0.291439" />
+                            <point x="0.909091" y="0.919854" />
+                            <point x="0.5" y="0.265027" />
+                            <point x="0.0950413" y="0.916211" />
+                            <point x="0.31095" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="clicker" sid="718616351911652">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Sprite2" sid="955340458252988">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="281744731856042" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\cherryclicker\cherries_txt.png">
+                        <collision-poly>
+                            <point x="0.165179" y="0.385417" />
+                            <point x="0.5" y="0.322917" />
+                            <point x="0.84375" y="0.364583" />
+                            <point x="0.928571" y="0.5" />
+                            <point x="0.8125" y="0.5625" />
+                            <point x="0.5" y="0.708333" />
+                            <point x="0.160714" y="0.625" />
+                            <point x="0.00446429" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Cherries" sid="996591209019783">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text4" sid="299260628249463">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Shop" sid="585298112979354">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text6" sid="819514326318739">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text7" sid="371238739845334">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text8" sid="553612771697929">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="buff_autofarm" sid="307116777378839">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Audio" sid="549123120665279">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="cherry2" sid="919691767008729">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="480576597438691" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\cherryclicker\cherry.png">
+                        <collision-poly>
+                            <point x="0.349074" y="0.349074" />
+                            <point x="0.5" y="0.365741" />
+                            <point x="0.776852" y="0.223148" />
+                            <point x="0.914815" y="0.5" />
+                            <point x="0.836111" y="0.836111" />
+                            <point x="0.5" y="0.953704" />
+                            <point x="0.243519" y="0.756481" />
+                            <point x="0.134259" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="cherryjam" sid="226252040889259">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="777278754479649" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\cherryclicker\cherryjam.png">
+                        <collision-poly>
+                            <point x="0.104167" y="0.104167" />
+                            <point x="0.5" y="0.0416667" />
+                            <point x="0.895833" y="0.104167" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.916667" y="0.916667" />
+                            <point x="0.5" y="0.989583" />
+                            <point x="0.0729167" y="0.927083" />
+                            <point x="0.0416667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text2" sid="290131133308679">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="4" />
+        <global-instance type="Audio" uid="12">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder>
+        <file name="effect.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
