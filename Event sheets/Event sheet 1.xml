@@ -3,8 +3,13 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="onoff" sid="242954755696999" static="0" type="number">2</variable>
+        <variable constant="0" name="buff3_count" sid="116916942829249" static="0" type="number">0</variable>
+        <variable constant="0" name="buff3_price" sid="182470732611603" static="0" type="number">30</variable>
+        <variable constant="0" name="buff2_count" sid="859425909697250" static="0" type="number">0</variable>
+        <variable constant="0" name="buff2_price" sid="744207658053982" static="0" type="number">15</variable>
         <variable constant="0" name="buff1_count" sid="603988430539929" static="0" type="number">0</variable>
-        <variable constant="0" name="buff1" sid="159654448959297" static="0" type="number">10</variable>
+        <variable constant="0" name="buff1_price" sid="159654448959297" static="0" type="number">10</variable>
         <variable constant="0" name="persecond" sid="459744767895074" static="0" type="number">0</variable>
         <variable constant="0" name="click" sid="675127205184930" static="0" type="number">1</variable>
         <variable constant="0" name="cherries" sid="473675336070760" static="0" type="number">0</variable>
@@ -17,15 +22,15 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-10" name="Add to" sid="803823616679039" type="System">
-                    <param id="0" name="Variable">cherries</param>
-                    <param id="1" name="Value">1</param>
-                </action>
                 <action id="0" name="Play" sid="628436164865099" type="Audio">
                     <param id="0" name="Audio file">effect</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">-4</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-10" name="Add to" sid="738570015686427" type="System">
+                    <param id="0" name="Variable">cherries</param>
+                    <param id="1" name="Value">click</param>
                 </action>
             </actions>
         </event-block>
@@ -35,45 +40,31 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="946595807964976" type="count">
-                    <param id="0" name="Text">cherries</param>
+                    <param id="0" name="Text">round(cherries)</param>
                 </action>
-                <action id="0" name="Set text" sid="608396675110147" type="Text7">
-                    <param id="0" name="Text">buff1</param>
+                <action id="0" name="Set text" sid="608396675110147" type="price_buff1">
+                    <param id="0" name="Text">round(buff1_price)</param>
                 </action>
-                <action id="0" name="Set text" sid="580578367139591" type="Text2">
+                <action id="0" name="Set text" sid="580578367139591" type="buff1_count">
                     <param id="0" name="Text">buff1_count</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="763761364072259">
-            <conditions>
-                <condition id="6" name="On object clicked" sid="563697232932830" type="Mouse">
-                    <param id="0" name="Mouse button">0</param>
-                    <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">buff_autofarm</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="265244285045367" type="System">
-                    <param id="0" name="Variable">buff1</param>
-                    <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">cherries</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Add to" sid="490111339978790" type="System">
-                    <param id="0" name="Variable">cherries</param>
-                    <param id="1" name="Value">-buff1</param>
+                <action id="0" name="Set text" sid="354989247775637" type="price_buff2">
+                    <param id="0" name="Text">round(buff2_price)</param>
                 </action>
-                <action id="-10" name="Add to" sid="776994917090268" type="System">
-                    <param id="0" name="Variable">buff1</param>
-                    <param id="1" name="Value">5</param>
+                <action id="0" name="Set text" sid="913235255403911" type="buff2_count">
+                    <param id="0" name="Text">buff2_count</param>
                 </action>
-                <action id="-10" name="Add to" sid="930788554957781" type="System">
-                    <param id="0" name="Variable">persecond</param>
-                    <param id="1" name="Value">1</param>
+                <action id="0" name="Set text" sid="530603453236631" type="info_auto">
+                    <param id="0" name="Text">persecond</param>
                 </action>
-                <action id="-10" name="Add to" sid="413168762965933" type="System">
-                    <param id="0" name="Variable">buff1_count</param>
-                    <param id="1" name="Value">1</param>
+                <action id="0" name="Set text" sid="355038286630499" type="info_click">
+                    <param id="0" name="Text">click</param>
+                </action>
+                <action id="0" name="Set text" sid="352445407577033" type="price_buff3">
+                    <param id="0" name="Text">round(buff3_price)</param>
+                </action>
+                <action id="0" name="Set text" sid="969052853546323" type="buff3_count">
+                    <param id="0" name="Text">buff3_count</param>
                 </action>
             </actions>
         </event-block>
@@ -90,5 +81,254 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="763761364072259">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="563697232932830" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">buff1_button</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="265244285045367" type="System">
+                    <param id="0" name="Variable">buff1_price</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">cherries</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="490111339978790" type="System">
+                    <param id="0" name="Variable">cherries</param>
+                    <param id="1" name="Value">-buff1_price</param>
+                </action>
+                <action id="-10" name="Add to" sid="930788554957781" type="System">
+                    <param id="0" name="Variable">persecond</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Add to" sid="413168762965933" type="System">
+                    <param id="0" name="Variable">buff1_count</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Add to" sid="206222434416537" type="System">
+                    <param id="0" name="Variable">buff1_price</param>
+                    <param id="1" name="Value">buff1_price*10/100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="445795156681845">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="742172573118858" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">buff2_button</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="752859063009063" type="System">
+                    <param id="0" name="Variable">cherries</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">buff2_price</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="939632325809475" type="System">
+                    <param id="0" name="Variable">cherries</param>
+                    <param id="1" name="Value">-buff2_price</param>
+                </action>
+                <action id="-10" name="Add to" sid="736653725124374" type="System">
+                    <param id="0" name="Variable">click</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Add to" sid="121449471741262" type="System">
+                    <param id="0" name="Variable">buff2_price</param>
+                    <param id="1" name="Value">buff2_price*70/100</param>
+                </action>
+                <action id="-10" name="Add to" sid="185756096359950" type="System">
+                    <param id="0" name="Variable">buff2_count</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="827313856453539">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="822952854019744" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">buff3_button</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="812950722193389" type="System">
+                    <param id="0" name="Variable">buff3_price</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">cherries</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="389534914712779" type="System">
+                    <param id="0" name="Variable">buff1_count</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="435815716994020" type="System">
+                    <param id="0" name="Variable">cherries</param>
+                    <param id="1" name="Value">-buff3_price</param>
+                </action>
+                <action id="-10" name="Add to" sid="939056816512359" type="System">
+                    <param id="0" name="Variable">buff3_price</param>
+                    <param id="1" name="Value">buff3_price*10/100</param>
+                </action>
+                <action id="-10" name="Add to" sid="925916678058687" type="System">
+                    <param id="0" name="Variable">persecond</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="-10" name="Add to" sid="412961907165610" type="System">
+                    <param id="0" name="Variable">buff3_count</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="907524110041801">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="755255942824702" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="114806326417637" type="Audio">
+                    <param id="0" name="Audio file">music</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-25</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="545556457024913" title="falling_cherries">
+            <sub-events>
+                <event-block sid="825367019311622">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="955856830001786" type="System">
+                            <param id="0" name="Variable">buff1_count</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="207088812640240" type="falling_cherry">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="804863400466926" type="falling_cherry2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="345132254299761" type="falling_cherry3">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="454779492612344">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="674188312992822" type="System">
+                            <param id="0" name="Variable">persecond</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="711001357568236" type="falling_cherry">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="619547586453672" type="falling_cherry2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="595785036675894">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="324492361217646" type="System">
+                            <param id="0" name="Variable">persecond</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="375200224279171" type="falling_cherry3">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="664080200202757">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="464143181624547" type="System">
+                            <param id="0" name="Variable">persecond</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="924653878666737" type="falling_cherry">
+                            <param id="0" name="Speed">400</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="454827803995984" type="falling_cherry2">
+                            <param id="0" name="Speed">400</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="741626350411719" type="falling_cherry3">
+                            <param id="0" name="Speed">400</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="953167080912141" title="SHOP">
+            <sub-events>
+                <event-block sid="471268066234785">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="355166752445241" type="Button" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="290830764978650" type="System">
+                            <param id="0" name="Variable">onoff</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="631596400055559">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="527434620702300" type="System">
+                            <param id="0" name="Variable">onoff</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="226883878868869" type="System">
+                            <param id="0" name="Variable">onoff</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="287561983595917">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="618510925331347" type="System">
+                            <param id="0" name="Variable">onoff</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="461366141523660" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="848897293170090">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="185864402340749" type="System">
+                            <param id="0" name="Variable">onoff</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="923438367898561" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

@@ -16,7 +16,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <properties>
         <property expanded="1" name="About" />
         <property expanded="1" name="Project settings" />
-        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1" />
@@ -35,5 +35,22 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Sprite2/" />
         <folder expanded="1" path="animation-folder/cherry2/" />
         <folder expanded="1" path="animation-folder/cherryjam/" />
+        <folder expanded="1" path="animation-folder/bottle/" />
+        <folder expanded="1" path="animation-folder/background/" />
+        <folder expanded="1" path="animation-folder/вишенки/" />
+        <folder expanded="1" path="animation-folder/магаз/" />
+        <folder expanded="1" path="animation-folder/falling_cherry/" />
+        <folder expanded="1" path="animation-folder/falling_cherry2/" />
+        <folder expanded="1" path="animation-folder/звездочка/" />
+        <folder expanded="1" path="animation-folder/falling_cherry3/" />
+        <folder expanded="1" path="animation-folder/line/" />
+        <folder expanded="1" path="animation-folder/line2/" />
+        <folder expanded="1" path="animation-folder/line3/" />
+        <folder expanded="1" path="animation-folder/buff/" />
+        <folder expanded="1" path="animation-folder/buff1/" />
+        <folder expanded="1" path="animation-folder/buff4/" />
+        <folder expanded="1" path="animation-folder/buff2/" />
+        <folder expanded="1" path="animation-folder/buff3/" />
+        <folder expanded="1" path="animation-folder/менюшка/" />
     </folders-expanded>
 </c2uistate>

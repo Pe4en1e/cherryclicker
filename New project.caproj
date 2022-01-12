@@ -16,8 +16,12 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="sliderbar" version="1">Slider bar</plugin>
     </used-plugins>
-    <used-behaviors />
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -144,13 +148,13 @@
         <object-type name="Text6" sid="819514326318739">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Text7" sid="371238739845334">
+        <object-type name="price_buff1" sid="371238739845334">
             <plugin id="Text" />
         </object-type>
         <object-type name="Text8" sid="553612771697929">
             <plugin id="Text" />
         </object-type>
-        <object-type name="buff_autofarm" sid="307116777378839">
+        <object-type name="buff1_button" sid="307116777378839">
             <plugin id="Button" />
         </object-type>
         <object-type name="Audio" sid="549123120665279">
@@ -194,7 +198,361 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Text2" sid="290131133308679">
+        <object-type name="buff1_count" sid="290131133308679">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="bottle" sid="478317293430911">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="649441175652709" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\cherryclicker\bottle.png">
+                        <collision-poly>
+                            <point x="0.09375" y="0.09375" />
+                            <point x="0.5" y="0.322917" />
+                            <point x="0.59375" y="0.40625" />
+                            <point x="0.677083" y="0.5" />
+                            <point x="0.927083" y="0.927083" />
+                            <point x="0.5" y="0.6875" />
+                            <point x="0.416667" y="0.583333" />
+                            <point x="0.333333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text3" sid="595512229125024">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="price_buff2" sid="785748570187997">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text5" sid="962624577245560">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="buff2_count" sid="170514458570723">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="buff2_button" sid="898115619459968">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="background" sid="481903018310305">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="702007997817576" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\cherryclicker\background.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="вишенки" sid="734992116814243">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="789383531265430" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\cherryclicker\вишенки.png">
+                        <collision-poly>
+                            <point x="0.0333333" y="0.1" />
+                            <point x="0.5" y="0.42" />
+                            <point x="0.863333" y="0.41" />
+                            <point x="0.936667" y="0.5" />
+                            <point x="0.943333" y="0.83" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.0333333" y="0.9" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="магаз" sid="583760182470301">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="858867120588574" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\cherryclicker\магаз.png">
+                        <collision-poly>
+                            <point x="0.0666667" y="0.2" />
+                            <point x="0.5" y="0.48" />
+                            <point x="0.873333" y="0.38" />
+                            <point x="0.986667" y="0.5" />
+                            <point x="0.96" y="0.88" />
+                            <point x="0.5" y="0.87" />
+                            <point x="0.0266667" y="0.92" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="falling_cherry" sid="117672141145860">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="343737679392825">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Wrap" sid="547865128049320">
+                    <behavior id="wrap" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="980176746474871" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\cherryclicker\вишняпнг.png">
+                        <collision-poly>
+                            <point x="0.285238" y="0.399333" />
+                            <point x="0.5" y="0.256" />
+                            <point x="0.63" y="0.518" />
+                            <point x="0.632381" y="0.485333" />
+                            <point x="0.5" y="0.695333" />
+                            <point x="0.3" y="0.58" />
+                            <point x="0.282381" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="falling_cherry2" sid="157623315436291">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="789785706991372">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Wrap" sid="947476752820569">
+                    <behavior id="wrap" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="344315408363752" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\cherryclicker\вишняпнг.png">
+                        <collision-poly>
+                            <point x="0.285238" y="0.399333" />
+                            <point x="0.5" y="0.256" />
+                            <point x="0.63" y="0.518" />
+                            <point x="0.632381" y="0.485333" />
+                            <point x="0.5" y="0.695333" />
+                            <point x="0.3" y="0.58" />
+                            <point x="0.282381" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="звездочка" sid="911599936528896">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="506929790336336" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\cherryclicker\звездочка.png">
+                        <collision-poly>
+                            <point x="0.383333" y="0.383333" />
+                            <point x="0.5" y="0.165741" />
+                            <point x="0.775" y="0.225" />
+                            <point x="0.735185" y="0.5" />
+                            <point x="0.590741" y="0.590741" />
+                            <point x="0.5" y="0.803704" />
+                            <point x="0.40463" y="0.59537" />
+                            <point x="0.2" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="falling_cherry3" sid="608554137552737">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="911187597265109">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Wrap" sid="358646363305035">
+                    <behavior id="wrap" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="730943595536863" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\cherryclicker\вишняпнг.png">
+                        <collision-poly>
+                            <point x="0.285238" y="0.399333" />
+                            <point x="0.5" y="0.256" />
+                            <point x="0.63" y="0.518" />
+                            <point x="0.632381" y="0.485333" />
+                            <point x="0.5" y="0.695333" />
+                            <point x="0.3" y="0.58" />
+                            <point x="0.282381" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="line" sid="703811956336920">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="495328809344197" speed="5">
+                    <frame duration="1" hotspotX="0.6" hotspotY="0.5" original-source="D:\cherryclicker\line.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="line2" sid="218597238896500">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="329436736594264" speed="5">
+                    <frame duration="1" hotspotX="0.6" hotspotY="0.5" original-source="D:\cherryclicker\line.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="line3" sid="214129708905431">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="606833980823854" speed="5">
+                    <frame duration="1" hotspotX="0.6" hotspotY="0.5" original-source="D:\cherryclicker\line.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="info_auto" sid="621733224511640">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text2" sid="814983510639449">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text7" sid="699932816529028">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text9" sid="458456392710530">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="info_click" sid="377319725432816">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="buff" sid="581556762662017">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="280781095042564" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\cherryclicker\buff1.png">
+                        <collision-poly>
+                            <point x="0.0078125" y="0.0234375" />
+                            <point x="0.5" y="0" />
+                            <point x="0.992188" y="0.0234375" />
+                            <point x="0.992188" y="0.976563" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0078125" y="0.976563" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="buff1" sid="907154001108826">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="625280600600862" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\cherryclicker\buff1.png">
+                        <collision-poly>
+                            <point x="0.0078125" y="0.0234375" />
+                            <point x="0.5" y="0" />
+                            <point x="0.992188" y="0.0234375" />
+                            <point x="0.992188" y="0.976563" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0078125" y="0.976563" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="buff4" sid="507812124122620">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="894369939147890" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\cherryclicker\buff2.png">
+                        <collision-poly>
+                            <point x="0.0078125" y="0.0234375" />
+                            <point x="0.5" y="0" />
+                            <point x="0.992188" y="0.0234375" />
+                            <point x="0.992188" y="0.976563" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0078125" y="0.976563" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="buff2" sid="475284570311827">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="961343167902116" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\cherryclicker\buff2.png">
+                        <collision-poly>
+                            <point x="0.0078125" y="0.0234375" />
+                            <point x="0.5" y="0" />
+                            <point x="0.992188" y="0.0234375" />
+                            <point x="0.992188" y="0.976563" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0078125" y="0.976563" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="price_buff3" sid="566423878553174">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="buff3" sid="340714240520061">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="232384570021881" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\cherryclicker\buff3.png">
+                        <collision-poly>
+                            <point x="0.0078125" y="0.0234375" />
+                            <point x="0.5" y="0" />
+                            <point x="0.992188" y="0.0234375" />
+                            <point x="0.992188" y="0.976563" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0078125" y="0.976563" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="buff3_button" sid="466263212374087">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="buff3_count" sid="333958100094421">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="SliderBar" sid="939208403629168">
+            <plugin id="sliderbar" />
+        </object-type>
+        <object-type name="SliderBar2" sid="827995889835926">
+            <plugin id="sliderbar" />
+        </object-type>
+        <object-type name="SliderBar3" sid="320610602832198">
+            <plugin id="sliderbar" />
+        </object-type>
+        <object-type name="Button" sid="789700768827362">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="менюшка" sid="204113611473223">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="686108106196940" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\alex3\Downloads\Telegram Desktop\менюшка (2).png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0.231333" />
+                            <point x="0.519524" y="0.5" />
+                            <point x="0.504286" y="0.306" />
+                            <point x="0.5" y="0.578667" />
+                            <point x="0.177143" y="0.752" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text10" sid="709570574920964">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text11" sid="851869570183497">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text12" sid="722836227866884">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text13" sid="497419241976134">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text14" sid="889673943135705">
             <plugin id="Text" />
         </object-type>
     </object-folder>
@@ -225,6 +583,7 @@
     <sounds-folder />
     <music-folder>
         <file name="effect.ogg" />
+        <file name="music.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">
